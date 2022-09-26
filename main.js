@@ -1,11 +1,10 @@
-let fizForm = document.querySelector(".fiz-form");
-let fizInput = document.querySelector(".fiz-input");
-let fizBtn = document.querySelector(".fiz-btn");
-let fizText = document.querySelector(".fiz-res-text");
+let fizzBuzzForm = document.querySelector(".fizzbuzz-form");
+let fizzBuzzInput = document.querySelector(".fizzbuzz-input");
+let fizzbuzzText = document.querySelector(".fizzbuzz-res-text");
 
-let fizResultText = document.querySelector(".fizz-result-text");
+let fizzResultText = document.querySelector(".fizz-result-text");
 let buzzResultText = document.querySelector(".buzz-result-text");
-let fizBuzzResultText = document.querySelector(".fizbuzz-result-text");
+let fizzBuzzResultText = document.querySelector(".fizbuzz-result-text");
 
 let fizzResultNum = document.querySelector(".fizz-result-num");
 let buzzResultNum = document.querySelector(".buzz-result-num");
@@ -19,30 +18,30 @@ let fizzSumArr = [];
 let buzzSumArr = [];
 let fizzBuzzSumArr = [];
 
-fizForm.addEventListener("submit", (evt) => {
+fizzBuzzForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  let fizInputValue = Number(fizInput.value.trim());
-  if (fizInputValue === 0 || isNaN(fizInputValue)) {
-    fizText.textContent = `Please enter number`;
-  } else if (fizInputValue % 3 == 0 && fizInputValue % 5 == 0) {
-    fizText.textContent = `FizBuzz`;
-    fizzBuzzSumArr.push(fizInputValue);
-    fizBuzzResultText.textContent = fizzBuzzSumArr;
+  let fizzBuzzInputValue = Number(fizzBuzzInput.value.trim());
+  if (fizzBuzzInputValue === 0 || isNaN(fizzBuzzInputValue)) {
+    fizzbuzzText.textContent = `Please enter number`;
+  } else if (fizzBuzzInputValue % 3 == 0 && fizzBuzzInputValue % 5 == 0) {
+    fizzbuzzText.textContent = `FizBuzz`;
+    fizzBuzzSumArr.push(fizzBuzzInputValue);
+    fizzBuzzResultText.textContent = fizzBuzzSumArr;
     fizzBuzzResultNumValue++;
     fizzBuzzResultNum.textContent = fizzBuzzResultNumValue;
-  } else if (fizInputValue % 3 == 0) {
-    fizText.textContent = `Buzz`;
-    buzzSumArr.push(fizInputValue);
+  } else if (fizzBuzzInputValue % 3 == 0) {
+    fizzbuzzText.textContent = `Buzz`;
+    buzzSumArr.push(fizzBuzzInputValue);
     buzzResultText.textContent = buzzSumArr;
     buzzResultNumValue++;
     buzzResultNum.textContent = buzzResultNumValue;
-  } else if (fizInputValue % 5 == 0) {
-    fizText.textContent = `Fizz`;
-    fizzSumArr.push(fizInputValue);
-    fizResultText.textContent = fizzSumArr;
+  } else if (fizzBuzzInputValue % 5 == 0) {
+    fizzbuzzText.textContent = `Fizz`;
+    fizzSumArr.push(fizzBuzzInputValue);
+    fizzResultText.textContent = fizzSumArr;
     fizzResultNumValue++;
     fizzResultNum.textContent = fizzResultNumValue;
   } else {
-    fizText.textContent = `${fizInputValue} raqami 3 ga ham 5 ga ham bo'linmaydi`;
+    fizzbuzzText.textContent = `${fizzBuzzInputValue} raqami 3 ga ham 5 ga ham bo'linmaydi`;
   }
 });

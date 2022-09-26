@@ -1,27 +1,27 @@
-.fiz-box {
+.fizzbuzz-box {
     padding-top: 250px;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.fiz-box-title {
+.fizzbuzz-box-title {
     font-size: 22px;
     font-weight: 700;
 }
 
-.fiz-form {
+.fizzbuzz-form {
     display: flex;
     align-items: center;
 }
 
-.fiz-input {
+.fizzbuzz-input {
     width: 350px;
     padding: 10px;
     margin-right: 20px;
 }
 
-.fiz-btn {
+.fizzbuzz-btn {
     padding: 10px 40px;
     border: none;
     background: transparent;
@@ -29,7 +29,7 @@
     cursor: pointer;
 }
 
-.fiz-res-text {
+.fizzbuzz-res-text {
     margin: 20px 0 0 0;
     font-size: 18px;
 }

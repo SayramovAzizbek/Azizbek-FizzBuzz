@@ -1,0 +1,53 @@
+.fiz-box {
+    padding-top: 250px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fiz-box-title {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.fiz-form {
+    display: flex;
+    align-items: center;
+}
+
+.fiz-input {
+    width: 350px;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.fiz-btn {
+    padding: 10px 40px;
+    border: none;
+    background: transparent;
+    background-color: yellow;
+    cursor: pointer;
+}
+
+.fiz-res-text {
+    margin: 20px 0 0 0;
+    font-size: 18px;
+}
+
+.fizzbuzz-main-result-box {
+    display: flex;
+    margin-top: 20px;
+}
+
+.result-box {
+    width: 200px;
+}
+
+.result-text {
+    margin: 0;
+    font-size: 15px;
+}
+
+.result-box:not(:last-child) {
+    margin-right: 70px;
+}

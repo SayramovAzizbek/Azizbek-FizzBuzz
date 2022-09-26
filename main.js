@@ -44,4 +44,6 @@ fizzBuzzForm.addEventListener("submit", (evt) => {
   } else {
     fizzbuzzText.textContent = `${fizzBuzzInputValue} raqami 3 ga ham 5 ga ham bo'linmaydi`;
   }
+
+  fizzBuzzInput.value = "";
 });

@@ -24,25 +24,46 @@ fizzBuzzForm.addEventListener("submit", (evt) => {
   if (fizzBuzzInputValue === 0 || isNaN(fizzBuzzInputValue)) {
     fizzbuzzText.textContent = `Please enter number`;
   } else if (fizzBuzzInputValue % 3 == 0 && fizzBuzzInputValue % 5 == 0) {
+    dividedFizzBuzz();
+  } else if (fizzBuzzInputValue % 3 == 0) {
+    dividedBuzz();
+  } else if (fizzBuzzInputValue % 5 == 0) {
+    divideFizz();
+  } else {
+    fizzbuzzText.textContent = `${fizzBuzzInputValue} number is not divisible by 3 or 5`;
+  }
+
+  /**
+   * Calls when user enters numbers divided to 3 and 5
+   */
+  function dividedFizzBuzz() {
     fizzbuzzText.textContent = `FizBuzz`;
     fizzBuzzSumArr.push(fizzBuzzInputValue);
     fizzBuzzResultText.textContent = fizzBuzzSumArr;
     fizzBuzzResultNumValue++;
     fizzBuzzResultNum.textContent = fizzBuzzResultNumValue;
-  } else if (fizzBuzzInputValue % 3 == 0) {
+  }
+
+  /**
+   * Calls when user enters numbers divided to 3
+   */
+  function dividedBuzz() {
     fizzbuzzText.textContent = `Buzz`;
     buzzSumArr.push(fizzBuzzInputValue);
     buzzResultText.textContent = buzzSumArr;
     buzzResultNumValue++;
     buzzResultNum.textContent = buzzResultNumValue;
-  } else if (fizzBuzzInputValue % 5 == 0) {
+  }
+
+  /**
+   * Calls when user enters numbers divided to 5
+   */
+  function divideFizz() {
     fizzbuzzText.textContent = `Fizz`;
     fizzSumArr.push(fizzBuzzInputValue);
     fizzResultText.textContent = fizzSumArr;
     fizzResultNumValue++;
     fizzResultNum.textContent = fizzResultNumValue;
-  } else {
-    fizzbuzzText.textContent = `${fizzBuzzInputValue} raqami 3 ga ham 5 ga ham bo'linmaydi`;
   }
 
   fizzBuzzInput.value = "";

@@ -43,6 +43,11 @@
     width: 200px;
 }
 
+.fizzbuzz-res-main-text,
+.result-text {
+    font-weight: 700;
+}
+
 .result-text {
     margin: 0;
     font-size: 15px;
